@@ -102,6 +102,6 @@ done!
 done!
 ```
 
-##Example
+## Example
 
 TODO UPDATE README WITH EXAMPLE (piping and plotting, tidyverse methods)
