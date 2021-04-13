@@ -42,3 +42,4 @@ Reads a list object (as from read_dpt()) and transforms it to a tibble in long f
 
 ##Example
 
+TODO UPDATE README WITH EXAMPLES, FUNCTION DESCRIPTIONS AND VIDEO SHOWING THE OUTPUT
