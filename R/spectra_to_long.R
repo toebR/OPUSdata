@@ -10,6 +10,7 @@
 
 spectra_to_long <- function(spectra_wide) {
   cols <- ncol(spectra_wide)
+  particlenr <- cols -1
   colnames(spectra_wide) <- c("wavelength", paste0("abs_particle", seq(1,particlenr,1)))
   spectra_wide %>%
     pivot_longer(cols = -wavelength) %>%

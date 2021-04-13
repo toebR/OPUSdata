@@ -15,6 +15,7 @@
 
 spectra_to_csv <- function(spectra,out_path, out_file) {
   cols <- ncol(spectra)
+  particlenr <- cols -1
   message(paste("Nr of Columns in spectra file = ", cols))
   message(paste("Nr of Particles in data = ", cols-1))
 
