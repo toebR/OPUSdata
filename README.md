@@ -102,7 +102,24 @@ done!
  Write CSV long and wide format...
 done!
 ```
+![image](https://user-images.githubusercontent.com/65813696/114616569-4ff72300-9ca7-11eb-93d7-7347ba603b8c.png)
+
+
 
 ## Example
+Choose particles and wavelength. Plot raw spectra.
 
-TODO UPDATE README WITH EXAMPLE (piping and plotting, tidyverse methods)
+```r
+spectra_to_long(spectra) -> spectra_dat
+
+spectra_dat %>%
+  filter(particle %in% c("abs_particle1", "abs_particle300"),
+         wavelength > 1250 & wavelength < 3000) %>%
+  ggplot(aes(x = wavelength, y = absorbtion_unit, color = particle, group = particle))+
+  geom_line(show.legend = TRUE) +
+  scale_x_reverse() 
+```
+
+<img src="https://user-images.githubusercontent.com/65813696/114616010-a6b02d00-9ca6-11eb-91dd-505154510a36.png"  width="500" height="500" />
+
+
