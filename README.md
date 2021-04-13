@@ -20,7 +20,7 @@ library(OPUSdata)
 library(tidyverse)
 ```
 
-##Functions
+## Functions
 
 ### read_dpt()
 This function reads a .dpt file and returns a list object holding the data.
