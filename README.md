@@ -68,6 +68,10 @@ The function ```spectra to long``` is integrated in this function.
 > spectra_to_csv(spectra = object_holding_spectra, out_path = r"(path\to\workspace)",
 +                out_file = "filename_for_csv")
 
+```
+Console Output example:
+
+```r
 Nr of Columns in spectra file =  327
 Nr of Particles in data =  326
 
@@ -96,7 +100,6 @@ done!
 
  Write CSV long and wide format...
 done!
-
 ```
 
 ##Example
