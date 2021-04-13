@@ -1,0 +1,16 @@
+Package: OPUSdata
+Type: Package
+Title: Transform Bruker OPUS spectra exports to usable format
+Version: 0.1.0
+Author: Tobias Stalder
+Maintainer: Tobias Stalder <tobias.stalder.geo@outlook.com>
+Description: This package holds functions to transform .dpt export data from Bruker OPUS
+    into data frames, long format and export as csv (E.g. spectral absorbtion data from particle measurements).
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Imports:
+    dplyr (>= 1.0.0.0),
+    magrittr, 
+    rlang
