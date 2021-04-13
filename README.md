@@ -17,6 +17,7 @@ The package is not yet on CRAN so you can install it from github and load it int
 ```r
 remotes::install_github("toebR/OPUSdata")
 library(OPUSdata)
+library(tidyverse)
 ```
 
 ##Functions
