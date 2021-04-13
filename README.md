@@ -34,12 +34,71 @@ spectra <- read_dpt(r"(path\to\file.dpt)")
 ```
 
 ### spectra_to_long()
-Reads a list object (as from read_dpt()) and transforms it to a tibble in long format (tidy)
+Reads a list object (as from read_dpt()) and transforms it to a tibble in long format (tidy). This function can be used if you want to directly work with the data in R.
 
 ```r
+> spectra_to_long(spectra)
+# A tibble: 630,484 x 3
+   wavelength particle       absorbtion_unit
+        <dbl> <chr>                    <dbl>
+ 1      3997. abs_particle1           -0.261
+ 2      3997. abs_particle2           -0.179
+ 3      3997. abs_particle3           -0.211
+ 4      3997. abs_particle4           -0.185
+ 5      3997. abs_particle5           -0.239
+ 6      3997. abs_particle6           -0.222
+ 7      3997. abs_particle7           -0.219
+ 8      3997. abs_particle8           -0.250
+ 9      3997. abs_particle9           -0.206
+10      3997. abs_particle10          -0.218
+# ... with 630,474 more rows
+```
+
+### spectra_to_csv()
+Reads a list object (as from read_dpt()). This function can be used to create outputs for MS excel users.
+It returns the following outputs: </br>
+1. Number of columns in the object
+2. Number of particles where spectra are available
+3. CSV in wide format
+4. CSV in long format
+
+The function ```spectra to long``` is integrated in this function.
+
+```r
+> spectra_to_csv(spectra = object_holding_spectra, out_path = r"(path\to\workspace)",
++                out_file = "filename_for_csv")
+
+Nr of Columns in spectra file =  327
+Nr of Particles in data =  326
+
+
+ Renaming data...
+done!
+
+
+ Transform data to long format..
+# A tibble: 630,484 x 3
+   wavelength particle       absorbtion_unit
+        <dbl> <chr>                    <dbl>
+ 1      3997. abs_particle1           -0.261
+ 2      3997. abs_particle2           -0.179
+ 3      3997. abs_particle3           -0.211
+ 4      3997. abs_particle4           -0.185
+ 5      3997. abs_particle5           -0.239
+ 6      3997. abs_particle6           -0.222
+ 7      3997. abs_particle7           -0.219
+ 8      3997. abs_particle8           -0.250
+ 9      3997. abs_particle9           -0.206
+10      3997. abs_particle10          -0.218
+# ... with 630,474 more rows
+done!
+
+
+ Write CSV long and wide format...
+done!
 
 ```
 
 ##Example
 
-TODO UPDATE README WITH EXAMPLES, FUNCTION DESCRIPTIONS AND VIDEO SHOWING THE OUTPUT
+TODO UPDATE README WITH EXAMPLE (piping and plotting, tidyverse methods)
