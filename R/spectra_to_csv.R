@@ -26,7 +26,7 @@ spectra_to_csv <- function(spectra,out_path, out_file) {
 
   message(paste("\n\n", "Transform data to long format.."))
   spectra %>%
-    spectra_to_long()
+    spectra_to_long() -> spectra_long
   message(paste("done!"))
 
   message(paste("\n\n", "Write CSV long and wide format..."))
