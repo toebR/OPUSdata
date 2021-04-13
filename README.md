@@ -65,8 +65,9 @@ It returns the following outputs: </br>
 The function ```spectra to long``` is integrated in this function.
 
 ```r
-> spectra_to_csv(spectra = object_holding_spectra, out_path = r"(path\to\workspace)",
-+                out_file = "filename_for_csv")
+spectra_to_csv(spectra = object_holding_spectra,
+               out_path = r"(path\to\workspace)",
+               out_file = "filename_for_csv")
 
 ```
 Console Output example:
